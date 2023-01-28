@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Pesquisa Instagram</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+  <body>
+    <h1>Histograma</h1>
+    <py-config>
+      packages = ["matplotlib", "pandas", "numpy"]
+    </py-config>
+
+    <py-script>
+        import pandas as pd
+        import numpy as np
+        import matplotlib.pyplot as plt
+
+        np.random.seed(86)
+        sorteio = np.random.standard_normal(1000)
+
+        fig, ax = plt.subplots()
+        ax.hist(sorteio, bins=30)
+        display(fig)
+    </py-script>
+
+
+  </body>
+</html>

@@ -3,7 +3,7 @@ import re
 
 bot = instaloader.Instaloader()
 
-conta = instaloader.Profile.from_username(bot.context, 'profsandromesquita')
+conta = instaloader.Profile.from_username(bot.context, 'jonnypaiva')
 
 print("Nome de usuario:", conta.username)
 print("ID: ", conta.userid)
