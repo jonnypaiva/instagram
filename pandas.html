@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <title>Seguidores</title>
+</head>
+<body>
+    <py-config>
+      packages = ["pandas"]
+    </py-config>
+    <h1>Seguidores</h1>
+    <div id="graf"></div>
+    <py-script output="graf">
+        import pandas as pd
+        from pyodide.http import open_url
+
+        url = 'https://raw.githubusercontent.com/Sandromesquita/datamining/main/followers.csv'
+        dados = open_url(url)
+        display(pd.read_csv(dados))
+
+    </py-script>
+</body>
+</html>
